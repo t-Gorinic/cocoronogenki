@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+
+/* body {
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif, 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+} */
+
+.no-gutter>[class*='col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.bg-lightgreen {
+	background-color: #e6ede9;
+}
+
+.bg-orange {
+	background-color: #FF6600;
+	/* 鮮やかなオレンジ色 */
+}
+
+.bg-orange:hover {
+	background-color: #FF8C00;
+	/* ホバー時のオレンジ色（明るめ） */
+	border-color: #FF8C00;
+	/* ボーダー色も変更したい場合 */
+}
+
+.navbar-dark .nav-link {
+	color: #FFFFFF !important;
+}
+
+.heading {
+	border-left: 6px solid #aaa;
+	padding: 0 0 0 10px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+	content: ">"
+}
+
+.footer-copyright {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	/* background-color: #f5f5f5; */
+}
+
+.map iframe {
+	width: 100%;
+	height: 450px;
+}
+
+/* ヘッダータイトル部
+============================================== */
+
+.header-logo {
+	max-width: 80px;
+	/* 画像の最大幅を設定 */
+}
+
+.header-text {
+	flex-grow: 1;
+	padding: 0 10px;
+}
+
+.clinic-name {
+	white-space: nowrap;
+	width: auto;
+	font-size: 30px;
+	margin-bottom: 0;
+	font-weight: bolder;
+}
+
+/* トップページ画像部
+============================================== */
+.jumbotron {
+	background-image: url('../img/top-image.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 600px;
+}
+
+.col-md-6 {
+	background-color: transparent;
+	border-style: none;
+}
+
+.display-4 {
+	white-space: nowrap;
+	width: auto;
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.display-4-lead {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.text-container {
+	position: relative;
+	padding-bottom: 2rem;
+	/* コンテナの下部に余白を追加 */
+}
+
+.shifted-text {
+	position: relative;
+	left: 50px;
+	/* 右に移動 */
+	top: 20px;
+	/* 下に移動 */
+}
+
+
+/* お知らせ
+============================================== */
+
+.news-list {
+	list-style: none outside;
+	margin: 0;
+	padding: 0;
+}
+
+.news-list .item a {
+	display: flex;
+	flex-wrap: wrap;
+	flex-wrap: nowrap;
+	text-decoration: none;
+	color: #333;
+	border-bottom: 1px solid #CCC;
+	padding: 20px 20px;
+}
+
+.news-list .item:first-child a {
+	border-top: 1px solid #CCC;
+}
+
+.news-list .item .date {
+	margin: 0;
+	min-width: 140px;
+	font-size: 16px;
+	color: #999;
+	padding: 0 20px 0 0;
+}
+
+.news-list .item .category {
+	margin: 0;
+	min-width: 140px;
+	padding: 0 20px 0 0;
+}
+
+.news-list .item .category span {
+	background: #999;
+	color: #FFF;
+	text-align: center;
+	display: inline-block;
+	padding: 5px 0;
+	font-size: 12px;
+	line-height: 1;
+	width: 80px;
+	min-width: max-content;
+	/* コンテンツが幅を超える場合に対応 */
+}
+
+.news-list .item .title {
+	margin: 0;
+	width: 100%;
+}
+
+.news-list .item a:hover .title {
+	color: #00F;
+}
+
+@media screen and (max-width: 767px) {
+	.news-list .item a {
+		flex-wrap: wrap;
+	}
+
+	.news-list .item .date {
+		min-width: 100px;
+	}
+
+	.news-list .item .title {
+		margin-top: 10px;
+	}
+}
+
+.item-content {
+	display: flex;
+	align-items: center;
+}
+
+.item-meta {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.date,
+.category {
+	margin: 0;
+	/* デフォルトのマージンを削除 */
+}
+
+.title {
+	flex: 1;
+	/* 残りのスペースを占有 */
+}
+
+/* 診療内容
+============================================== */
+
+/* カード全体 */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ホバー時のポップアップ効果 */
+.card-hover:hover {
+    transform: scale(1.05); /* 拡大 */
+    z-index: 5; /* 前面に移動 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* 強い影を追加 */
+}
+
+/* 画像の角を丸くする */
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+/* ホバー時に画像も少し拡大 */
+.card-hover:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+/* このような方へ
+============================================== */
+
+.for-you-content {
+	background-color: white;
+	padding: 15px;
+	border-style: solid;
+	height: 450px;
+	margin: 30px 0px;
+}
+
+/* content-wrapperのスタイルを明確に指定 */
+.content-wrapper {
+	height: 100%;
+	/* 親要素の高さいっぱいに */
+}
+
+/* テキストエリアのスタイル */
+.for-you-content-text,
+.for-you-content-retext {
+	flex: 1;
+	/* スペースの分配 */
+}
+
+/* 画像を含むfigureのスタイル */
+.content-wrapper figure {
+	flex: 0 0 50%;
+	max-width: 50%;
+	margin: 0;
+	/* デフォルトのマージンを削除 */
+	display: flex;
+	/* 画像を中央寄せするために追加 */
+	align-items: center;
+}
+
+/* 位置調整 */
+.for-you-content-text p,
+.for-you-content-text ul,
+.for-you-content-text h3,
+.for-you-content-text pre {
+	position: relative;
+	left: 80px;
+	top: 30px;
+}
+
+.for-you-content-retext h3,
+.for-you-content-retext pre {
+	position: relative;
+	left: 50px;
+	top: 30px;
+}
+
+/* 画像のスタイル */
+.for-you-content-img .for-you-content-reimg {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.for-you-content-img {
+	position: relative;
+	left: -30px;
+}
+
+.for-you-content-reimg {
+	position: relative;
+	left: 50px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+	.content-wrapper {
+		flex-direction: column;
+	}
+
+	.content-wrapper figure {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+/* このような方へ 最後の締め文章
+============================================== */
+
+/* セクション全体 */
+.consultation-section {
+	background: linear-gradient(to bottom right, #fef6e4, #ffede1);
+	color: #444;
+	font-family: 'Arial', sans-serif;
+}
+
+/* セクションタイトル */
+.section-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #ff7a59;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* サブタイトル */
+.section-subtitle {
+	font-size: 1.2rem;
+	color: #666;
+}
+
+/* 引用部分 */
+.blockquote {
+	font-style: italic;
+	color: #555;
+	border-left: 4px solid #ff7a59;
+	padding-left: 15px;
+	margin: 0;
+}
+
+.quote {
+	font-size: 1.4rem;
+	line-height: 1.6;
+}
+
+.blockquote-footer {
+	font-size: 0.9rem;
+	color: #999;
+}
+
+/* テキスト部分 */
+.text-muted {
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: #444;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+	.section-title {
+		font-size: 2rem;
+	}
+
+	.section-subtitle {
+		font-size: 1rem;
+	}
+
+	.blockquote {
+		text-align: center;
+	}
+}
+
+/* ギャラリー
+============================================== */
+/* モーダル全体 */
+.image-modal {
+    display: none; /* 非表示 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を暗く */
+}
+
+/* モーダル内の画像 */
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+/* アニメーション */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 閉じるボタン */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* キャプション */
+#caption {
+    text-align: center;
+    color: #ccc;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ホバー時にカーソルをポインターに */
+.gallery-img {
+    cursor: pointer;
+    transition: transform 0.3s ease; /* 画像のアニメーション */
+}
+
+/* ホバー時に少し拡大 */
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+
+/* スタッフ
+============================================== */
+
+.staff-card {
+	transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+	transform: translateY(-5px);
+}
+
+.avatar-circle {
+	width: 60px;
+	height: 60px;
+	background: linear-gradient(45deg, #4e73df, #36b9cc);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.badge {
+	font-weight: normal;
+	font-size: 0.8rem;
+}
+
+.list-unstyled li {
+	margin-bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.btn-outline-primary {
+	border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+	background-color: transparent;
+	color: #4e73df;
+	border-color: currentColor;
+}
+
+
+/* アクセス
+============================================== */
+
+.fixed-height-table tr {
+	height: 60px;
+	/* 固定の高さを設定 */
+}
+
+.fixed-height-table td,
+.fixed-height-table th {
+	vertical-align: middle;
+	/* セル内の垂直方向の配置を中央に */
+	line-height: 1.5;
+	padding: 10px;
+}
+
+/* 大デバイス（デスクトップ, 992px 未満）
+============================================== */
+@media screen and (max-width: 991.98px) {
+	.footer-logo {
+		width: 100%;
+	}
+}
+
+/* END */
+
+/* 中デバイス（タブレット, 768px 未満）
+============================================== */
+@media screen and (max-width: 767.98px) {
+	.gnav-item {
+		display: block;
+		width: 100%;
+		border: none;
+	}
+
+	.gnav-item+.gnav-item {
+		border: none;
+	}
+
+	table th,
+	table td {
+		padding: .25rem !important;
+	}
+
+	table th:first-child {
+		width: 25%;
+	}
+}
+
+/* END */
+
+/* 小デバイス（縦向きモバイル, 576px 以上 デスクトップ, 992px 未満）
+============================================== */
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+	#sec2 {
+		height: 500px;
+	}
+}
+
+/* END */
+
+/* 小デバイス（縦向きモバイル, 576px 以上）
+============================================== */
+@media screen and (min-width: 576px) {
+	#sec2 .message {
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* END */

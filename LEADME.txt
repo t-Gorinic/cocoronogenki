@@ -1,0 +1,1 @@
+﻿This is the source code used for the clinic's homepage. Modifications without administrator permission are not permitted.
